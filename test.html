@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบวันปิยมหาราช</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #e0f7fa; color: #004d99; }
+        h1 { color: #0066cc; text-align: center; }
+        .question { margin-bottom: 20px; }
+        .content { max-width: 800px; margin: auto; background-color: #b3e5fc; padding: 20px; border-radius: 10px; }
+        button { padding: 10px 20px; background-color: #0099ff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #007acc; }
+    </style>
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const answers = {
+                q1: 'ง',
+                q2: 'ค',
+                q3: 'ง',
+                q4: 'ค',
+                q5: 'ง',
+                q6: 'ง',
+                q7: 'ง',
+                q8: 'ค',
+                q9: 'ง',
+                q10: 'ก'
+            };
+
+            for (let key in answers) {
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === answers[key]) {
+                    score++;
+                }
+            }
+
+            alert(`คุณได้คะแนน ${score} จาก 10 คะแนน`);
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1>แบบทดสอบวันปิยมหาราช</h1>
+        <div class="question">
+            <p>1. วันปิยมหาราชตรงกับวันที่เท่าไหร่ของทุกปี?</p>
+            <input type="radio" name="q1" value="ก"> 24 ตุลาคม<br>
+            <input type="radio" name="q1" value="ข"> 13 เมษายน<br>
+            <input type="radio" name="q1" value="ค"> 5 ธันวาคม<br>
+            <font color="#ff0000"><input type="radio" name="q1" value="ง"> 23 ตุลาคม</font>
+        </div>
+        <div class="question">
+            <p>2. พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 ทรงได้รับพระราชสมัญญานามว่าอะไร?</p>
+            <input type="radio" name="q2" value="ก"> สมเด็จพระมหิตลาธิเบศร<br>
+            <input type="radio" name="q2" value="ข"> สมเด็จพระมหาธีรราชเจ้า<br>
+            <font color="#ff0000"><input type="radio" name="q2" value="ค"> สมเด็จพระปิยมหาราช<br></font>
+            <input type="radio" name="q2" value="ง"> สมเด็จพระศรีสรรเพชญ์
+        </div>
+        <div class="question">
+            <p>3. พระราชกรณียกิจที่สำคัญของพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 มีอะไรบ้าง?</p>
+            <input type="radio" name="q3" value="ก"> การปฏิรูปการปกครอง<br>
+            <input type="radio" name="q3" value="ข"> การเลิกทาส<br>
+            <input type="radio" name="q3" value="ค"> การขยายอาณาเขต<br>
+            <font color="#ff0000"><input type="radio" name="q3" value="ง"> ทั้งหมดข้างต้น</font>
+        </div>
+        <div class="question">
+            <p>4. สถานที่ใดที่ประชาชนนิยมไปวางพวงมาลารำลึกถึงพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 ในวันปิยมหาราช?</p>
+            <input type="radio" name="q4" value="ก"> วัดพระศรีรัตนศาสดาราม<br>
+            <input type="radio" name="q4" value="ข"> พระบรมมหาราชวัง<br>
+            <font color="#ff0000"><input type="radio" name="q4" value="ค"> พระบรมรูปทรงม้า<br></font>
+            <input type="radio" name="q4" value="ง"> พิพิธภัณฑสถานแห่งชาติ พระนคร
+        </div>
+        <div class="question">
+            <p>5. อะไรคือสิ่งสำคัญที่เราควรเรียนรู้จากพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5?</p>
+            <input type="radio" name="q5" value="ก"> ความกล้าหาญ<br>
+            <input type="radio" name="q5" value="ข"> ความฉลาด<br>
+            <input type="radio" name="q5" value="ค"> ความเสียสละ<br>
+            <font color="#ff0000"> <input type="radio" name="q5" value="ง"> ทั้งหมดข้างต้น</font>
+        </div>
+        <div class="question">
+            <p>6. พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 ทรงมีพระราชดำริจัดตั้งหน่วยงานใดขึ้นเป็นครั้งแรกในประเทศไทย?</p>
+            <input type="radio" name="q6" value="ก"> กรมตำรวจ<br>
+            <input type="radio" name="q6" value="ข"> กระทรวงกลาโหม<br>
+            <input type="radio" name="q6" value="ค"> กระทรวงการคลัง<br>
+            <font color="#ff0000"><input type="radio" name="q6" value="ง"> กระทรวงยุติธรรม</font>
+        </div>
+        <div class="question">
+            <p>7. พระราชกรณียกิจด้านการศึกษาที่สำคัญของพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 คืออะไร?</p>
+            <input type="radio" name="q7" value="ก"> การก่อตั้งโรงเรียนมหาวิทยาลัย<br>
+            <input type="radio" name="q7" value="ข"> การประกาศใช้พระราชบัญญัติประถมศึกษา<br>
+            <input type="radio" name="q7" value="ค"> การส่งนักเรียนไทยไปศึกษาต่อต่างประเทศ<br>
+            <font color="#ff0000"><input type="radio" name="q7" value="ง"> ทั้งหมดข้างต้น</font>
+        </div>
+        <div class="question">
+            <p>8. พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 ทรงริเริ่มการก่อสร้างสถานที่สำคัญใด?</p>
+            <input type="radio" name="q8" value="ก"> พระบรมมหาราชวัง<br>
+            <input type="radio" name="q8" value="ข"> วัดพระศรีรัตนศาสดาราม<br>
+            <font color="#ff0000"><input type="radio" name="q8" value="ค"> สะพานพระราม 1<br></font>
+            <input type="radio" name="q8" value="ง"> อนุสาวรีย์ชัยสมรภูมิ
+        </div>
+        <div class="question">
+            <p>9. พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 ทรงมีพระนามลำลองว่าอย่างไร?</p>
+            <input type="radio" name="q9" value="ก"> หม่อมเจ้าหลงอุบล<br>
+            <input type="radio" name="q9" value="ข"> หม่อมเจ้าชายชุมพล<br>
+            <input type="radio" name="q9" value="ค"> หม่อมเจ้าอินทราวโรรัตน์<br>
+            <font color="#ff0000"><input type="radio" name="q9" value="ง"> สมเด็จพระเจ้าอยู่หัว</font>
+        </div>
+        <div class="question">
+            <p>10. พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 ทรงเสด็จสวรรคตเมื่อปี พ.ศ. เท่าไหร่?</p>
+             <font color="#ff0000"><input type="radio" name="q10" value="ก"> พ.ศ. 2453<br></font>
+            <input type="radio" name="q10" value="ข"> พ.ศ. 2489<br>
+            <input type="radio" name="q10" value="ค"> พ.ศ. 2504<br>
+            <input type="radio" name="q10" value="ง"> พ.ศ. 2499
+        </div>
+        <button onclick="checkAnswers()">ส่งคำตอบ</button>
+        <a href="1.html">
+            <button>หน้าแรก</button>
+        </a>
+    </div>
+</body>
+</html>
